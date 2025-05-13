@@ -1,22 +1,3 @@
-/*
-  # Create records table with enhanced features
-
-  1. New Tables
-    - `records`
-      - `id` (uuid, primary key)
-      - `title` (text, not null)
-      - `body` (text, not null)
-      - `created_at` (timestamptz, default now())
-      - `updated_at` (timestamptz, default now())
-      - `user_id` (uuid, references auth.users)
-      - `category` (text)
-      - `status` (text)
-      - `priority` (integer)
-
-  2. Security
-    - Enable RLS on `records` table
-    - Add policies for CRUD operations
-*/
 
 CREATE TABLE IF NOT EXISTS records (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
